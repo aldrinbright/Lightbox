@@ -10,6 +10,8 @@ const lightboxBtns = document.querySelectorAll('.lightbox-btn');
 const lightboxBtnRight = document.querySelector('#right');
 const lightboxBtnleft = document.querySelector('#left');
 
+const toTopBtn = document.getElementById('to-top');
+
 let activeImage;
 
 let lastImage = lightboxArray.length - 1;
@@ -110,3 +112,8 @@ window.addEventListener('keydown', e => {
         hideLightBox();
     }
 });
+
+
+toTopBtn.addEventListener('click', e =>{
+    window.scroll(0,0);
+})
