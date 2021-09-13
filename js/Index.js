@@ -11,6 +11,7 @@ const lightboxBtnRight = document.querySelector('#right');
 const lightboxBtnleft = document.querySelector('#left');
 
 const toTopBtn = document.getElementById('to-top');
+const closeBtn = document.getElementById('#close');
 
 let activeImage;
 
@@ -83,9 +84,9 @@ lightboxArray.forEach(image => {
     });
 });
 
-lightboxContainer.addEventListener('click', () => {
-    hideLightBox();
-});
+// lightboxContainer.addEventListener('click', () => {
+//     hideLightBox();
+// });
 
 lightboxBtns.forEach(btn => {
     btn.addEventListener('click', e => {
@@ -114,6 +115,6 @@ window.addEventListener('keydown', e => {
 });
 
 
-toTopBtn.addEventListener('click', e =>{
+toTopBtn.addEventListener('click', e => {
     window.scroll(0,0);
 })
